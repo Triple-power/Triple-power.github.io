@@ -44,8 +44,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 target.scrollIntoView({
                     behavior: 'smooth',
                     block: 'start'
+                });
+            }
         });
-    }
+    });
 
     // Chatbot Functionality
     const chatbotToggle = document.getElementById('chatbotToggle');
@@ -193,6 +195,14 @@ document.addEventListener('DOMContentLoaded', function() {
             lastScroll = currentScroll;
         });
     }
+
+    // Scroll-reactive futuristic background shift
+    const updateTechScroll = () => {
+        const scrollShift = Math.min(window.scrollY * 0.12, 120);
+        document.documentElement.style.setProperty('--tech-scroll-shift', `${scrollShift}px`);
+    };
+    updateTechScroll();
+    window.addEventListener('scroll', updateTechScroll, { passive: true });
 
     // Intersection Observer for fade-in animations
     const observerOptions = {
