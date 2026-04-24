@@ -7,16 +7,13 @@
     <link rel="icon" type="image/png" href="/images/LOGO1.png">
     <link rel="shortcut icon" type="image/png" href="/images/LOGO1.png">
     <link rel="apple-touch-icon" href="/images/LOGO1.png">
-    <!-- Preconnect to font origins first for faster font load -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Preload hero logo so it doesn't block LCP -->
     <link rel="preload" href="/images/LOGO1.png" as="image">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
@@ -38,55 +35,47 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-container">
-            <!-- Centered Logo with Motion Graphics -->
-            <div class="hero-logo-container">
-                <!-- Left Motion Graphics -->
-                <div class="motion-graphics motion-graphics-left">
-                    <svg class="wave-svg" viewBox="0 0 200 400" preserveAspectRatio="none">
+            <div class="hero-logo-container static-hero-graphic">
+                <div class="motion-graphic-static motion-graphic-left" aria-hidden="true">
+                    <svg viewBox="0 0 220 360" class="static-wave-svg" xmlns="http://www.w3.org/2000/svg">
                         <defs>
-                            <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.6" />
-                                <stop offset="50%" style="stop-color:#06b6d4;stop-opacity:0.8" />
-                                <stop offset="100%" style="stop-color:#14b8a6;stop-opacity:0.6" />
+                            <linearGradient id="staticWaveLeft" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.28" />
+                                <stop offset="50%" stop-color="#06b6d4" stop-opacity="0.9" />
+                                <stop offset="100%" stop-color="#14b8a6" stop-opacity="0.28" />
                             </linearGradient>
                         </defs>
-                        <path class="wave-path" d="M0,100 Q50,50 100,100 T200,100" fill="none" stroke="url(#waveGradient)" stroke-width="5"/>
-                        <path class="wave-path" d="M0,150 Q50,120 100,150 T200,150" fill="none" stroke="url(#waveGradient)" stroke-width="2"/>
-                        <path class="wave-path" d="M0,200 Q50,170 100,200 T200,200" fill="none" stroke="url(#waveGradient)" stroke-width="5"/>
-                        <path class="wave-path" d="M0,250 Q50,220 100,250 T200,250" fill="none" stroke="url(#waveGradient)" stroke-width="2"/>
-                        <path class="wave-path" d="M0,300 Q50,270 100,300 T200,300" fill="none" stroke="url(#waveGradient)" stroke-width="5"/>
+                        <path d="M0 80 C40 40, 90 40, 140 80 S220 120, 220 80" fill="none" stroke="url(#staticWaveLeft)" stroke-width="5" stroke-linecap="round" />
+                        <path d="M0 145 C40 115, 90 115, 140 145 S220 175, 220 145" fill="none" stroke="url(#staticWaveLeft)" stroke-width="3" stroke-linecap="round" opacity="0.9" />
+                        <path d="M0 210 C40 175, 90 175, 140 210 S220 245, 220 210" fill="none" stroke="url(#staticWaveLeft)" stroke-width="5" stroke-linecap="round" />
+                        <path d="M0 275 C40 245, 90 245, 140 275 S220 305, 220 275" fill="none" stroke="url(#staticWaveLeft)" stroke-width="3" stroke-linecap="round" opacity="0.9" />
                     </svg>
                 </div>
-              
-                <!-- Logo -->
+
                 <div class="hero-logo-wrapper">
                     <img src="/images/LOGO1.png" alt="Triplepower Logo" class="hero-logo" fetchpriority="high"
                          onerror="this.onerror=null; this.src='images/LOGO1.png';">
                 </div>
-              
-                <!-- Right Motion Graphics -->
-                <div class="motion-graphics motion-graphics-right">
-                    <svg class="wave-svg" viewBox="0 0 200 400" preserveAspectRatio="none">
+
+                <div class="motion-graphic-static motion-graphic-right" aria-hidden="true">
+                    <svg viewBox="0 0 220 360" class="static-wave-svg" xmlns="http://www.w3.org/2000/svg">
                         <defs>
-                            <linearGradient id="waveGradientRight" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" style="stop-color:#14b8a6;stop-opacity:0.6" />
-                                <stop offset="50%" style="stop-color:#06b6d4;stop-opacity:0.8" />
-                                <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:0.6" />
+                            <linearGradient id="staticWaveRight" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#14b8a6" stop-opacity="0.28" />
+                                <stop offset="50%" stop-color="#06b6d4" stop-opacity="0.9" />
+                                <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.28" />
                             </linearGradient>
                         </defs>
-                        <path class="wave-path" d="M0,100 Q50,50 100,100 T200,100" fill="none" stroke="url(#waveGradientRight)" stroke-width="5"/>
-                        <path class="wave-path" d="M0,150 Q50,120 100,150 T200,150" fill="none" stroke="url(#waveGradientRight)" stroke-width="2"/>
-                        <path class="wave-path" d="M0,200 Q50,170 100,200 T200,200" fill="none" stroke="url(#waveGradientRight)" stroke-width="5"/>
-                        <path class="wave-path" d="M0,250 Q50,220 100,250 T200,250" fill="none" stroke="url(#waveGradientRight)" stroke-width="2"/>
-                        <path class="wave-path" d="M0,300 Q50,270 100,300 T200,300" fill="none" stroke="url(#waveGradientRight)" stroke-width="5"/>
+                        <path d="M0 80 C40 40, 90 40, 140 80 S220 120, 220 80" fill="none" stroke="url(#staticWaveRight)" stroke-width="5" stroke-linecap="round" />
+                        <path d="M0 145 C40 115, 90 115, 140 145 S220 175, 220 145" fill="none" stroke="url(#staticWaveRight)" stroke-width="3" stroke-linecap="round" opacity="0.9" />
+                        <path d="M0 210 C40 175, 90 175, 140 210 S220 245, 220 210" fill="none" stroke="url(#staticWaveRight)" stroke-width="5" stroke-linecap="round" />
+                        <path d="M0 275 C40 245, 90 245, 140 275 S220 305, 220 275" fill="none" stroke="url(#staticWaveRight)" stroke-width="3" stroke-linecap="round" opacity="0.9" />
                     </svg>
                 </div>
             </div>
-          
-            <!-- Content Below Logo -->
+
             <div class="hero-content">
                 <div class="hero-left">
                     <p class="hero-target">
@@ -103,7 +92,6 @@
         </div>
     </section>
 
-    <!-- AI Section -->
     <section class="ai-section">
         <div class="container">
             <div class="ai-content">
@@ -114,14 +102,12 @@
         </div>
     </section>
 
-    <!-- VEDA Section -->
     <section class="veda-section">
         <div class="container">
             <h2 class="veda-heading">book a strategy call</h2>
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
             <h2 class="section-title">About Me</h2>
@@ -141,7 +127,6 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
             <h2 class="section-title">Working Branches</h2>
@@ -201,7 +186,6 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
             <h2 class="section-title">Skills</h2>
@@ -241,7 +225,6 @@
         </div>
     </section>
 
-    <!-- Contact Section - SheetMonkey Integrated -->
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
@@ -263,48 +246,26 @@
                         </div>
                     </div>
                 </div>
-                
-                <!-- SheetMonkey Integrated Form -->
+
                 <form class="contact-form" id="sheetmonkey-form">
                     <div class="form-group">
-                        <input 
-                            type="text" 
-                            id="name" 
-                            name="Name" 
-                            placeholder="Your Name" 
-                            required
-                        >
+                        <input type="text" id="name" name="Name" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
-                        <input 
-                            type="email" 
-                            id="email" 
-                            name="Email" 
-                            placeholder="Your Email" 
-                            required
-                        >
+                        <input type="email" id="email" name="Email" placeholder="Your Email" required>
                     </div>
                     <div class="form-group">
-                        <textarea 
-                            id="message" 
-                            name="Message" 
-                            placeholder="Your Message" 
-                            rows="5" 
-                            required
-                        ></textarea>
+                        <textarea id="message" name="Message" placeholder="Your Message" rows="5" required></textarea>
                     </div>
                     <button type="submit" class="btn-primary" id="submit-btn">
                         Send Message
                     </button>
-                    
-                    <!-- Success/Error Messages -->
                     <div id="form-message" class="form-message" style="display: none;"></div>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <p>&copy; 2025 Vinesh. All rights reserved.</p>
@@ -312,7 +273,6 @@
         </div>
     </footer>
 
-    <!-- Chatbot Widget -->
     <div class="chatbot-container" id="chatbotContainer">
         <div class="chatbot-header">
             <div class="chatbot-header-content">
@@ -326,7 +286,7 @@
         <div class="chatbot-messages" id="chatbotMessages">
             <div class="chatbot-message bot-message">
                 <div class="message-content">
-                    <p>Hello!  How can I help you today?</p>
+                    <p>Hello! How can I help you today?</p>
                 </div>
             </div>
         </div>
@@ -341,7 +301,6 @@
         </div>
     </div>
 
-    <!-- Chatbot Toggle Button -->
     <button class="chatbot-toggle" id="chatbotToggle" aria-label="Open chatbot">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
@@ -350,8 +309,7 @@
     </button>
 
     <script src="script.js"></script>
-    
-    <!-- SheetMonkey Integration Script -->
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const form = document.getElementById('sheetmonkey-form');
@@ -360,29 +318,24 @@
 
             form.addEventListener('submit', async function(e) {
                 e.preventDefault();
-                
-                // Show loading state
                 submitBtn.textContent = 'Sending...';
                 submitBtn.disabled = true;
                 messageDiv.style.display = 'none';
 
                 try {
                     const formData = new FormData(form);
-                    const response = await fetch('https://api.sheetmonkey.io/form/eHwpqcR5jpXvgXvWu2VxfX', {
+                    await fetch('https://api.sheetmonkey.io/form/eHwpqcR5jpXvgXvWu2VxfX', {
                         method: 'POST',
                         body: formData,
-                        mode: 'no-cors' // SheetMonkey requires no-cors
+                        mode: 'no-cors'
                     });
 
-                    // Show success message (no-cors prevents reading response)
-                    showMessage('Thank you! Your message has been sent successfully. I\'ll get back to you soon!', 'success');
+                    showMessage('Thank you! Your message has been sent successfully. I\\'ll get back to you soon!', 'success');
                     form.reset();
-                    
                 } catch (error) {
                     console.error('Form submission error:', error);
                     showMessage('Oops! Something went wrong. Please try again or email me directly.', 'error');
                 } finally {
-                    // Reset button
                     submitBtn.textContent = 'Send Message';
                     submitBtn.disabled = false;
                 }
@@ -392,8 +345,7 @@
                 messageDiv.textContent = text;
                 messageDiv.className = `form-message ${type}`;
                 messageDiv.style.display = 'block';
-                
-                // Auto-hide success message after 5 seconds
+
                 if (type === 'success') {
                     setTimeout(() => {
                         messageDiv.style.display = 'none';
@@ -403,7 +355,6 @@
         });
     </script>
 
-    <!-- CSS for form messages -->
     <style>
         .form-message {
             margin-top: 1rem;
@@ -422,8 +373,7 @@
             color: #dc2626;
             border: 1px solid #fecaca;
         }
-        
-        /* Ensure form fields have proper names for SheetMonkey */
+
         .contact-form input[name="Name"],
         .contact-form input[name="Email"],
         .contact-form textarea[name="Message"] {
@@ -435,7 +385,7 @@
             transition: border-color 0.2s, box-shadow 0.2s;
             box-sizing: border-box;
         }
-        
+
         .contact-form input[name="Name"]:focus,
         .contact-form input[name="Email"]:focus,
         .contact-form textarea[name="Message"]:focus {
